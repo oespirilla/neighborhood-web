@@ -6,5 +6,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'Residencial Zarahemla';
+  adminOptions = [
+    {
+      name: 'Blocks',
+    },
+    {
+      name: 'Houses',
+    },
+    {
+      name: 'Neighbors',
+    }
+  ];
+  userOptions = [
+    {
+      name: 'Security',
+    },
+    {
+      name: 'Map',
+    }
+  ];
 }

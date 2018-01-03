@@ -1,28 +1,18 @@
-<div>
+<div class="basic-container">
   <mat-toolbar color="primary">
-    <span><mat-icon>mood</mat-icon></span>
-
-    <span>Yay, Material in Angular 2!</span>
-
-    <button mat-icon-button [mat-menu-trigger-for]="menu">
-      <mat-icon>more_vert</mat-icon>
-    </button>
+    <mat-icon>location_city</mat-icon>
+    <span>{{title}}</span>
   </mat-toolbar>
-  <mat-menu x-position="before" #menu="matMenu">
-    <button mat-menu-item>Option 1</button>
-    <button mat-menu-item>Option 2</button>
-  </mat-menu>
-
-  <mat-card>
-    <button mat-button>All</button>
-    <button mat-raised-button>Of</button>
-    <button mat-raised-button color="primary">The</button>
-    <button mat-raised-button color="accent">Buttons</button>
-  </mat-card>
-
-  <span class="done">
-    <button mat-fab>
-      <mat-icon>check circle</mat-icon>
-    </button>
-  </span>
+  <mat-sidenav-container class="sidenav-container" >
+    <mat-sidenav mode="side"  opened="true" class="sidenav">
+        <mat-nav-list>
+            <h3 mat-subheader>Admin</h3>
+            <mat-list-item *ngFor="let option of adminOptions">
+              <a matLine href=".">{{option.name}}</a>
+            </mat-list-item>
+            <mat-divider></mat-divider>           
+          </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>Main content</mat-sidenav-content>
+  </mat-sidenav-container>
 </div>
